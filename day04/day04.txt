@@ -1,0 +1,11 @@
+Arraylist vs LinkedList
+    Arraylist 
+        장점 : 검색 수정이 빠르다 for문을 적게 쓴다
+        단점 : 추가 삭제가 느리다
+    LinkedList
+        장점 : 추가 삭제가 빠르다
+        단점 : 검색, 수정이 매우 느리다
+
+            추가    삭제    수정    검색
+Arraylist    X       X       O       O
+LinkedList   O       O       X       X
