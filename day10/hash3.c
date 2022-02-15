@@ -61,9 +61,15 @@ void removeByKey(Hash* h, int key) {
 	int hv = hash(key);
 	Node* curr = h->table[hv];
 	while (curr != NULL) {
-		if(curr->data == )
+        if(curr->data.st_num == key){
+            break;
+        }
+        curr = curr->link;
 	}
-	Node* removeNode = (Node*)
+    Node* removeNode = curr->link;
+    curr->link = removeNode->link;
+
+    free(removeNode);
 }
 //수정
 void update(Hash* h, int key, char* name) {
@@ -75,6 +81,7 @@ void select(Hash* h, int key, Student* res) {
 	int hv = hash(key);
 	Node* curr = h->table[hv];
 }
+
 int main() {
 	Hash h;
 	init(&h);
@@ -89,6 +96,9 @@ int main() {
 	add(&h, s3);
 	add(&h, s4);
 
-	show(h);
+	// show(h);
+
+    removeByKey(&h, 22);
+    show(h);
 	return 0;
 }
