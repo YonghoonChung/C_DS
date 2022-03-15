@@ -93,7 +93,7 @@ char* inToPost(char exp[]) { // exp: 사용자가 입력한 중위표현식
         else if (ch == ')') { // 닫는 소괄호라면
             //top이 '('가 될때까지 뽑아서 res에 붙여준다
             pop(&s, &top);
-            while (top != '(') {
+            while (top != '(')  {
                 res[idx++] = top;
                 pop(&s, &top);
             }
